@@ -5,10 +5,26 @@
 /* Tailwind Components */
 
 .wrapped {
-  @apply container px-8 py-8 mx-auto max-w-6xl;
+  @apply container mx-auto max-w-6xl px-8;
 }
 .nav-link {
-  @apply uppercase font-normal py-2 text-sm border-y-4 border-transparent hover:border-b-red-400 tracking-wide;
+  @apply uppercase font-normal tracking-wide text-sm border-y-4 border-transparent hover:border-b-teal-200 hover:scale-110 w-full py-2 block cursor-pointer;
 }
 
 /* End of Components */
+
+/*  Custom CSS */
+
+.hero-bg {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('./assets/image-burger.jpg');
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+}
+
+/*  End of Custom */

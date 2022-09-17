@@ -12,8 +12,7 @@ class Controller {
   }
 
   initialise() {
-    this.view.generateElements();
-    this.view.renderPage();
+    this.view.render();
   }
 }
 
