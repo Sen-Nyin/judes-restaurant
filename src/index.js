@@ -8,6 +8,12 @@ class Controller {
   constructor() {
     this.view = new View();
     this.model = new Model();
+    this.initialise();
+  }
+
+  initialise() {
+    this.view.generateElements();
+    this.view.renderPage();
   }
 }
 

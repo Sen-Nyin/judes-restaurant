@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Tailwind Components */
+
+.wrapped {
+  @apply container px-8 py-8 mx-auto max-w-6xl;
+}
+.nav-link {
+  @apply uppercase font-normal py-2 text-sm border-y-4 border-transparent hover:border-b-red-400 tracking-wide;
+}
+
+/* End of Components */
