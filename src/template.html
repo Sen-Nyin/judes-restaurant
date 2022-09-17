@@ -11,7 +11,28 @@
     <header class="min-h-max bg-teal-500 shadow-md">
       <div
         class="wrapped flex flex-wrap justify-between items-center text-slate-50"
-      ></div>
+      >
+        <div class="flex flex-col flex-1 py-2">
+          <span data-label="Brand Name" class="font-bold text-3xl"></span>
+          <span data-label="City" class="font-light-text-md"></span>
+        </div>
+        <button
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          id="navtoggle"
+          class="block md:hidden"
+        >
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav id="primary-navigation" class="w-full md:w-auto">
+          <ul
+            aria-label="Primary Navigation"
+            data-label="Menu"
+            role="list"
+            class="hidden md:flex md:gap-10 md:justify-between"
+          ></ul>
+        </nav>
+      </div>
     </header>
     <main class="flex-1"></main>
     <footer class="bg-gray-700 text-slate-50 py-10">

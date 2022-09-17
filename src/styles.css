@@ -10,7 +10,10 @@
 .nav-link {
   @apply uppercase font-normal tracking-wide text-sm border-y-4 border-transparent hover:border-b-teal-200 hover:scale-110 w-full py-2 block cursor-pointer;
 }
-
+.visually-hidden {
+  @apply whitespace-nowrap absolute w-[1px] h-[1px] p-0 m-[-1px] overflow-hidden border-none;
+  clip: rect(0, 0, 0, 0);
+}
 /* End of Components */
 
 /*  Custom CSS */
