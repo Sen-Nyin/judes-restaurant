@@ -24,7 +24,7 @@ class Controller {
     this.view.nav.build(
       this.model.nav,
       this.model.business.name,
-      this.model.business.address.city
+      this.model.business.address.town
     );
     this.view.eventHandlers(this.handleClick().bind(this));
   }

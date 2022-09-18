@@ -6,11 +6,12 @@ export default class Model {
     this.business = {
       name: "Jude's",
       address: {
-        street: null,
-        city: 'Liverpool',
-        postcode: null,
+        street: '24 Oxton Road',
+        town: 'Oxton',
+        city: 'Wirral',
+        postcode: 'CH41 2QJ',
       },
-      phone: null,
+      phone: '07581147693',
       email: null,
     };
     this.menu = {
