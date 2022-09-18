@@ -3,7 +3,7 @@
 import Util from '../util.js';
 export default class Hero extends Util {
   build() {
-    const main = document.querySelector('main');
+    const header = document.querySelector('header');
     const section = super.create(
       'section',
       //   'h-[calc(100vh-108px)]',
@@ -43,6 +43,6 @@ export default class Hero extends Util {
     cta.dataset.target = 'menu';
     container.append(heroHeader, subtext, cta);
     section.append(container);
-    main.prepend(section);
+    header.append(section);
   }
 }
