@@ -5,14 +5,17 @@
 /* Tailwind Components */
 
 .wrapped {
-  @apply container mx-auto max-w-6xl px-8;
+  @apply container mx-auto max-w-6xl px-8 py-4;
 }
 .nav-link {
-  @apply uppercase font-normal tracking-wide text-sm border-y-4 border-transparent hover:border-b-teal-200 hover:scale-110 w-full py-2 block cursor-pointer;
+  @apply uppercase font-normal tracking-wide text-sm border-y-4 border-transparent hover:border-b-teal-200 hover:scale-110 w-full py-2 block cursor-pointer duration-200;
 }
 .visually-hidden {
   @apply whitespace-nowrap absolute w-[1px] h-[1px] p-0 m-[-1px] overflow-hidden border-none;
   clip: rect(0, 0, 0, 0);
+}
+.btn {
+  @apply uppercase text-sm px-12 py-4 mt-8 rounded-sm shadow-lg hover:scale-105 hover:shadow-2xl duration-200;
 }
 /* End of Components */
 

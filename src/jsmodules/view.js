@@ -1,6 +1,7 @@
 'use: strict';
 
 import Util from './util.js';
+import sprite from '../assets/sprite.svg';
 
 export default class View extends Util {
   constructor() {
@@ -22,7 +23,7 @@ export default class View extends Util {
     const main = document.querySelector('main');
     const section = super.create(
       'section',
-      'h-[calc(100vh-76px)]',
+      'h-[calc(100vh-108px)]',
       'hero-bg',
       'flex',
       'justify-center',
@@ -44,7 +45,15 @@ export default class View extends Util {
     heroHeader.textContent = 'We love food. We think you will too.';
     const subtext = super.create('h2', 'text-lg');
     subtext.textContent = "Fall in love with food again at Jude's";
-    container.append(heroHeader, subtext);
+    const cta = super.create(
+      'button',
+      'btn',
+      'text-slate-50',
+      'bg-teal-500',
+      'hover:bg-teal-600'
+    );
+    cta.textContent = 'View Menu';
+    container.append(heroHeader, subtext, cta);
     section.append(container);
     main.append(section);
   }
@@ -57,6 +66,16 @@ export default class View extends Util {
     const navList = document.querySelector('[data-label="Menu"]');
     const navToggle = document.getElementById('navtoggle');
     navToggle.addEventListener('click', this.toggleNav);
+    const burger = super.svg(
+      'burger',
+      'text-slate-50',
+      'hover:text-red-800',
+      'fill-current',
+      'w-6',
+      'h-6',
+      'cursor-pointer'
+    );
+    navToggle.append(burger);
 
     brandName.textContent = "Jude's";
     brandLocation.textContent = 'Liverpool';
@@ -71,9 +90,14 @@ export default class View extends Util {
   toggleNav() {
     const navButton = document.getElementById('navtoggle');
     const navList = document.querySelector('[data-label="Menu"]');
-    navList.hasAttribute('data-visible')
-      ? navButton.setAttribute('aria-expanded', false)
-      : navButton.setAttribute('aria-expanded', true);
+    const burgerIcon = document.querySelector('[data-label="burger-icon"]');
+    if (navList.hasAttribute('data-visible')) {
+      navButton.setAttribute('aria-expanded', false);
+      burgerIcon.setAttribute('href', `${sprite}#icon-burger`);
+    } else {
+      navButton.setAttribute('aria-expanded', true);
+      burgerIcon.setAttribute('href', `${sprite}#icon-x`);
+    }
     navList.classList.toggle('hidden');
     navList.toggleAttribute('data-visible');
   }
