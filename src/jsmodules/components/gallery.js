@@ -19,7 +19,7 @@ export default class Gallery extends Util {
 
     const container = super.create('div', 'wrapped');
     const heading = super.create('h2', 'section-header');
-    heading.textContent = 'Gallery';
+    heading.textContent = 'Check out our grub...';
 
     const imageGrid = super.create(
       'div',
@@ -39,7 +39,9 @@ export default class Gallery extends Util {
         'gallery-img',
         'overflow-hidden',
         'rounded-lg',
-        'shadow-md'
+        'shadow-md',
+        'hover:scale-105',
+        'duration-200'
       );
       const image = super.create(
         'img',
