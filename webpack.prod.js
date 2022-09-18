@@ -18,10 +18,6 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-      {
         test: /\.css$/i,
         include: path.resolve(__dirname, 'src'),
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],

@@ -19,13 +19,9 @@ module.exports = {
   },
   plugins: [
     // new MiniCssExtractPlugin({
-    //   filename: 'index.scss',
+    //   filename: 'styles.css',
     //   chunkFilename: 'index.[contenthash].css',
     // }),
-    new MiniCssExtractPlugin({
-      filename: 'styles.css',
-      chunkFilename: 'index.[contenthash].css',
-    }),
     new HtmlWebpackPlugin({
       template: './src/template.html',
       title: 'Webpack Testing',
