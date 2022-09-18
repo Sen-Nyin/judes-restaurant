@@ -41,7 +41,23 @@ export default class Gallery extends Util {
         'rounded-lg',
         'shadow-md',
         'hover:scale-105',
-        'duration-200'
+        'hover:shadow-xl',
+        'duration-200',
+        'relative',
+        'after:absolute',
+        'after:h-30',
+        'after:bg-black',
+        'after:bottom-0',
+        'after:left-0',
+        'after:right-0',
+        'after:content-["yolo"]',
+        'after:h-24',
+        'after:opacity-80',
+        'after:p-2',
+        'after:text-gray-300',
+        'after:translate-y-full',
+        'hover:after:translate-y-0',
+        'after:duration-200'
       );
       const image = super.create(
         'img',
