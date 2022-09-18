@@ -22,6 +22,7 @@ export default class View extends Util {
     }
   }
   clearPage() {
+    document.getElementById('hero')?.remove();
     const main = document.querySelector('main');
     while (main.firstChild) main.firstChild.remove();
   }
