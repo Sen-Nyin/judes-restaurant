@@ -7,7 +7,7 @@ export default class Model {
       name: "Jude's",
       address: {
         street: null,
-        city: null,
+        city: 'Liverpool',
         postcode: null,
       },
       phone: null,
@@ -17,6 +17,12 @@ export default class Model {
       breakfast: [],
       lunch: [],
       dinner: [],
+    };
+    this.gallery = {
+      img1: {
+        image: 'gallery-1',
+        overlay: null,
+      },
     };
   }
 }

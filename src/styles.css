@@ -17,6 +17,9 @@
 .btn {
   @apply uppercase text-sm px-12 py-4 mt-8 rounded-sm shadow-lg hover:scale-105 hover:shadow-2xl duration-200;
 }
+.section-header {
+  @apply font-bold text-4xl text-center mb-12;
+}
 /* End of Components */
 
 /*  Custom CSS */
@@ -29,8 +32,12 @@
     ),
     url('./assets/image-burger.jpg');
   background-size: cover;
-  background-repeat: none;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-img {
+  aspect-ratio: 1;
 }
 
 /*  End of Custom */
