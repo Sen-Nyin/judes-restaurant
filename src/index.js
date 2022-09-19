@@ -21,7 +21,7 @@ class Controller {
   }
 
   initialise() {
-    this.view.render('contact', this.model.contact);
+    this.view.render('home', this.model.home);
     this.view.nav.build(
       this.model.nav,
       this.model.name,
