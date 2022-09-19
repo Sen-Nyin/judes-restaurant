@@ -4,9 +4,7 @@ import Util from '../util.js';
 import img from '../../assets/gallery-3.jpg';
 export default class Menu extends Util {
   build(data) {
-    console.log(data);
     const food = data.menus;
-    console.log(food.length);
     const main = document.querySelector('main');
     const section = super.create('section', 'py-24');
     const container = super.create('div', 'wrapped');
@@ -26,16 +24,19 @@ export default class Menu extends Util {
     // loop through menu
     for (let i = 0; i < food.length; i++) {
       const { name, desc, price, image: pic } = food[i];
-      const url = new URL(`../../assets/${pic}`, import.meta.url);
+
       const menuItem = super.create('li', 'menu-item');
       const imageBox = super.create('div', 'menu-image-box');
+
       const image = new Image();
+      const imageAddress = `../../assets/${pic}`;
       image.classList.add('images');
-      image.src = url;
+      image.src = new URL(`${imageAddress}`, import.meta.url);
       imageBox.append(image);
+
       const detailBox = super.create('div', 'menu-details');
       const itemHeading = super.create('h3', 'text-xl', 'font-bold');
-      itemHeading.textContent = `${name}`; //TODO
+      itemHeading.textContent = `${name}`;
       const itemDesc = super.create('p');
       itemDesc.textContent = `${desc}`;
       detailBox.append(itemHeading, itemDesc);
