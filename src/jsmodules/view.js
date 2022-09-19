@@ -3,6 +3,7 @@
 import Nav from './components/nav.js';
 import Hero from './components/hero.js';
 import Gallery from './components/gallery.js';
+import Menu from './components/menu.js';
 import Util from './util.js';
 import sprite from '../assets/sprite.svg';
 
@@ -12,14 +13,19 @@ export default class View extends Util {
     this.hero = new Hero();
     this.nav = new Nav();
     this.gallery = new Gallery();
+    this.menu = new Menu();
   }
   render(page, data) {
     this.clearPage();
-
-    if (page === 'home') {
-      this.hero.build();
-      this.gallery.build();
-    }
+    const target = super.capitalise(page);
+    this[`build${target}`](data);
+  }
+  buildHome(data) {
+    this.hero.build(data.hero);
+    this.gallery.build(data.gallery);
+  }
+  buildMenu(data) {
+    this.menu.build(data);
   }
   clearPage() {
     document.getElementById('hero')?.remove();
@@ -49,7 +55,6 @@ export default class View extends Util {
   }
 
   // // content builders
-  // buildGallery() {}
   // buildReviews() {}
   // buildMenu() {}
   // buildContact() {}

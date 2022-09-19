@@ -12,14 +12,14 @@ import img8 from '../../assets/gallery-8.jpg';
 import img9 from '../../assets/gallery-9.jpg';
 
 export default class Gallery extends Util {
-  build() {
+  build(data) {
     const main = document.querySelector('main');
     const section = super.create('section', 'py-24');
     section.id = 'gallery';
 
     const container = super.create('div', 'wrapped');
     const heading = super.create('h2', 'section-header');
-    heading.textContent = 'Check out our grub...';
+    heading.textContent = `${data.headline}`;
 
     const imageGrid = super.create(
       'div',
@@ -59,13 +59,7 @@ export default class Gallery extends Util {
         'hover:after:translate-y-0',
         'after:duration-200'
       );
-      const image = super.create(
-        'img',
-        'object-cover',
-        'object-center',
-        'w-full',
-        'h-full'
-      );
+      const image = super.create('img', 'images');
       image.setAttribute('src', images[i]);
       imageBox.append(image);
       imageGrid.append(imageBox);

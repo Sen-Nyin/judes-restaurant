@@ -15,14 +15,23 @@ export default class Model {
       email: null,
     };
     this.menu = {
-      breakfast: [],
-      lunch: [],
-      dinner: [],
+      headline: "What's on the menu?",
+      menus: [
+        {
+          name: 'Cheese Burger',
+          desc: 'A juicy cheese burger made with cheddar cheese, 100% beef, topped with fresh mayonaise and encased in a toasted briosche bun',
+          price: '£5.00',
+          image: 'gallery-3.jpg',
+        },
+      ],
     };
-    this.gallery = {
-      img1: {
-        image: 'gallery-1',
-        overlay: null,
+    this.home = {
+      hero: {
+        headline: 'We love food. We think you will too.',
+        subtext: 'Fall in love with food again',
+      },
+      gallery: {
+        headline: 'Check out our grub...',
       },
     };
   }

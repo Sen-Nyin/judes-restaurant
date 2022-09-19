@@ -2,7 +2,7 @@
 
 import Util from '../util.js';
 export default class Hero extends Util {
-  build() {
+  build(data) {
     const header = document.querySelector('header');
     const section = super.create(
       'section',
@@ -28,9 +28,9 @@ export default class Hero extends Util {
       'md:text-6xl',
       'lg:text-7xl'
     );
-    heroHeader.textContent = 'We love food. We think you will too.';
+    heroHeader.textContent = `${data.headline}`;
     const subtext = super.create('h2', 'text-lg');
-    subtext.textContent = "Fall in love with food again at Jude's";
+    subtext.textContent = `${data.subtext}`;
     const cta = super.create(
       'button',
       'btn',

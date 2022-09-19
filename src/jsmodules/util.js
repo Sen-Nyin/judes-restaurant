@@ -19,4 +19,7 @@ export default class Util {
     svg.append(use);
     return svg;
   }
+  capitalise(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 }

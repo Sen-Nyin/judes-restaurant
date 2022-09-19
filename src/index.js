@@ -10,17 +10,18 @@ class Controller {
     this.model = new Model();
     this.initialise();
   }
+
   handleClick() {
     return function (e) {
       if (!e.target.classList.contains('nav-link')) return;
 
       const target = e.target.dataset.target;
-      this.view.render(target, this.model);
+      this.view.render(target, this.model[target]);
     };
   }
 
   initialise() {
-    this.view.render('home', this.model);
+    this.view.render('menu', this.model.menu);
     this.view.nav.build(
       this.model.nav,
       this.model.business.name,

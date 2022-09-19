@@ -20,6 +20,21 @@
 .section-header {
   @apply font-bold text-4xl text-center mb-12;
 }
+.menu-item {
+  @apply flex flex-col md:flex-row items-center gap-4 px-4 py-4 rounded-md shadow-lg hover:bg-teal-50 hover:scale-105 hover:shadow-xl duration-200;
+}
+.menu-image-box {
+  @apply self-stretch overflow-hidden rounded-md md:rounded-lg md:w-32 md:h-32 lg:w-40 lg:h-40 h-40 bg-slate-200 border border-teal-50 duration-200;
+}
+.menu-details {
+  @apply flex-1 self-stretch flex flex-col gap-1 px-4 py-4;
+}
+.menu-price {
+  @apply self-stretch w-full justify-self-stretch px-4 py-4 md:w-24 text-right;
+}
+.images {
+  @apply object-cover object-center w-full h-full;
+}
 /* End of Components */
 
 /*  Custom CSS */
