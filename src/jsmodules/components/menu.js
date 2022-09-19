@@ -29,9 +29,9 @@ export default class Menu extends Util {
       const imageBox = super.create('div', 'menu-image-box');
 
       const image = new Image();
-      const imageAddress = `../../assets/${pic}`;
+
       image.classList.add('images');
-      image.src = new URL(`${imageAddress}`, import.meta.url);
+      image.src = pic;
       imageBox.append(image);
 
       const detailBox = super.create('div', 'menu-details');
