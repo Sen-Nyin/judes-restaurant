@@ -4,6 +4,7 @@ import Nav from './components/nav.js';
 import Hero from './components/hero.js';
 import Gallery from './components/gallery.js';
 import Menu from './components/menu.js';
+import Contact from './components/contact.js';
 import Util from './util.js';
 import sprite from '../assets/sprite.svg';
 
@@ -14,6 +15,7 @@ export default class View extends Util {
     this.nav = new Nav();
     this.gallery = new Gallery();
     this.menu = new Menu();
+    this.contact = new Contact();
   }
   render(page, data) {
     this.clearPage();
@@ -26,6 +28,9 @@ export default class View extends Util {
   }
   buildMenu(data) {
     this.menu.build(data);
+  }
+  buildContact(data) {
+    this.contact.build(data);
   }
   clearPage() {
     document.getElementById('hero')?.remove();

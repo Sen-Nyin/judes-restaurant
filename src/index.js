@@ -21,11 +21,11 @@ class Controller {
   }
 
   initialise() {
-    this.view.render('menu', this.model.menu);
+    this.view.render('contact', this.model.contact);
     this.view.nav.build(
       this.model.nav,
-      this.model.business.name,
-      this.model.business.address.town
+      this.model.name,
+      this.model.contact.address.town
     );
     this.view.eventHandlers(this.handleClick().bind(this));
   }

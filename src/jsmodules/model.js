@@ -12,16 +12,18 @@ import menu9 from '../assets/gallery-9.jpg';
 export default class Model {
   constructor() {
     this.nav = ['home', 'menu', 'contact'];
-    this.business = {
-      name: 'Fairytale Kitchen',
+
+    this.name = 'Fairytale Kitchen';
+    this.contact = {
+      headline: 'Get in touch',
       address: {
-        street: '24 The Stree',
+        street: '24 The Street',
         town: 'Halfway to Heaven',
-        city: 'Paradise}',
+        city: 'Paradise',
         postcode: 'TT44 4TT',
       },
       phone: '555-555-5555',
-      email: null,
+      email: 'email@yoloswaggins.com',
     };
     this.menu = {
       headline: "What's on the menu?",
